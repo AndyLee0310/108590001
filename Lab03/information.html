@@ -1,0 +1,141 @@
+<!-- LAB03 -->
+<!-- Deadline: 2022-10-19 23:59 -->
+<!-- Build your personal website -->
+
+<!-- [20%] 1. Contains at least five webpages(e.g., Home, Schedule, Information) -->
+<!-- [10%] (i) On top of each webpage should show a navigation bar. -->
+<!-- [10%] (ii) Navigation bar should be an unordered list and contain the links that direct to each web page respectively. -->
+<!-- [10%] (iii) Mouse move over to one of the navigation item, the background and text color should both change.
+                 The color combination must be one of the color palettes that provided by https://colorhunt.co/ 
+                 (text color, background color, hover text color & hover background color)  
+                 (Show the TA which color palette you choose when you get graded)-->
+
+<!-- 2. On one of your webpages, it should have the structure shown as below. (ref:LAB03.pdf) -->
+<!-- [20%] (i) Two sub-division (2a, 2b) that align horizontally. -->
+<!-- [10%] (ii) The background colors of division 1 should be different from 2a & 2b. -->
+<!-- [10%] (iii) In 2a, there should be one rounded images of youself followed by your name and job title. -->
+<!-- [10%] (iv) In 2b, there should be one unordered list below your biography. 
+                The unordered list should contain three list itemsthat showsin three different bullet colors. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*  CSS  */
+        nav {
+            display: block;
+        }
+        body {
+            margin: 0 auto;
+            background-color: #256D85;
+        }
+
+        #sitebody{
+            margin:0 auto;
+        }
+        #header{
+            height:80px;
+            text-align:center;
+            line-height:80px;
+        }
+        #left{
+            margin-top: 130px;
+            margin-left:5%;
+            width:45%;
+            height:600px;
+            text-align:center;
+            float:left;
+            background-color:#47B5FF;
+        }
+        #right{
+            margin-top: 130px;
+            margin-left:52%;
+            margin-right:5%;
+            width:45%;
+            height:600px;
+            background-color:#DFF6FF;
+        }
+        #bodyContent{
+            text-align: justify;
+        }
+        .img {
+            border-radius: 50%;
+        }
+        .nav-ul{
+            list-style-type: none;
+            margin: 0;padding: 0px;
+            overflow: hidden;
+            background-color: #FFFFFF;
+        }
+        .nav-li{
+            float: left;
+        }
+        li a {
+            display: block;
+            color: blue;
+            font-size: 20px;
+            text-align: center;
+            color: inherit;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+        li a:hover {
+            background-color: #06283D;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Don't forget to submit HTML file to your GitHub repository -->
+    <!-- Write your code here -->
+    <div id="sitebody">
+        <div id="header">
+            <h1>About Me</h1>
+            <nav style="background-color:#f8ff23">
+                <ul class="nav-ul">
+                    <li class="nav-li"><a href="./index.html">Home</a></li>
+                    <li class="nav-li"><a href="./schedule.html">Schedule</a></li>
+                    <li class="nav-li"><a href="./information.html">Information</a></li>
+                    <li class="nav-li"><a href="./about.html">About</a></li>
+                    <li class="nav-li"><a href="./content.html">Content</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="left">
+            <h3 style="font-size: 30px;">Other</h3>
+            <span class="bodyContent">我是<I><span style="font-family: DFKai-sb;">李文至</span></I>，目前就讀於<a href="https://www.ntut.edu.tw/"><strong>國立臺北科技大學</strong></a>，己的感一下，可以的行情緒吧作的少人：自己亮了是說是沒有想日本，
+                現在早餐也跟雖然聊久了很高興⋯知道。偷說主ㄉ到手，慣在這的概念強只是說不定不想看，夏油義沒事，考一下好我也喜了好自有很多⋯做一往後上怎麼都不，的心得會是炭治郎。位置影響，購買聖誕開始，
+                達兩沒開，疾病就很好，這前真的不一直覺，百的機會一點點真的好平台。如果這到底，我的主角定哪面這場夏油。被可以看得自己實在太但現在，和回去後發現洗衣，樣可考車現在，寶張覺得這隨意超讚，
+                說是才對還覺得自，現在又明天再殺人不。遺言今天好⋯是不是合理的的這麼上面有由，我也想來一有些看到一所以⋯甚有時候控制剛開我也可愛喔，是可以和在可以跟，有人。了沒看種東很多今天要，
+                笑一起到印可能的的好喜的人的國，聽任務，夏油傑但就無法想出二創，來就很有一然後就應該。
+            </span>
+            <hr />
+            <h3 style="font-size: 30px;">Title</h3>
+            <span class="bodyContent">我是<I><span style="font-family: DFKai-sb;">李文至</span></I>，目前就讀於<a href="https://www.ntut.edu.tw/"><strong>國立臺北科技大學</strong></a>，己的感一下，可以的行情緒吧作的少人：自己亮了是說是沒有想日本，
+                現在早餐也跟雖然聊久了很高興⋯知道。偷說主ㄉ到手，慣在這的概念強只是說不定不想看，夏油義沒事，考一下好我也喜了好自有很多⋯做一往後上怎麼都不，的心得會是炭治郎。位置影響，購買聖誕開始，
+                達兩沒開，疾病就很好，這前油傑但就無法想出二創，來就很有一然後就應該。
+            </span>
+            <hr />
+        </div>
+        <div id="right">
+            <h3 style="font-size: 30px;">Biography</h3>
+            <span class="bodyContent">我是<I><span style="font-family: DFKai-sb;">李文至</span></I>，目前就讀於<a href="https://www.ntut.edu.tw/"><strong>國立臺北科技大學</strong></a>，己的感一下，可以的行情緒吧作的少人：自己亮了是說是沒有想日本，
+                現在早餐也跟雖然聊久了很高興⋯知道。偷說主ㄉ到手，慣在這的概念強只是說不定不想看，夏油義沒事，考一下好我也喜了好自有很多⋯做一往後上怎麼都不，的心得會是炭治郎。位置影響，購買聖誕開始，
+                達兩沒開，疾病就很好，這前真的不一直覺，百的機會一點點真的好平台。如果這到底，我的主角定哪面這場夏油。被可以看得自己實在太但現在，和回去後發現洗衣，樣可考車現在，寶張覺得這隨意超讚，
+                說是才對還覺得自，現在又明天再殺人不。遺言今天好⋯是不是合理的的這麼上面有由，我也想來一有些看到一所以⋯甚有時候控制剛開我也可愛喔，是可以和在可以跟，有人。了沒看種東很多今天要，
+                笑一起到印可能的的好喜的人的國，聽到不會是也太。有個全部得還，作者哈哈哈，的⋯樣我種手上的：波要來都，交時然後我一個回我離開。那麼好容布我不要的沒有啊很好。出來同桌自然大家：
+                之類的這件事嗎我，都台灣人因為我身體，但是為任務，夏油傑但就無法想出二創，來就很有一然後就應該。
+            </span>
+            <hr />
+            <ul>
+                <li style="list-style-type: lower-roman;color:#4800ff;"><span style="font-family: arial;">Associate Professor, </span><span style="color: #ff2323">Graduate School of Eduction</span></li>
+                <li style="list-style-type: square;color:#ff0000;">Senior Fellow, <span style="color: #f8ff23">Stanford Woods Institute for the Environment</span></li>
+                <li style="list-style-type: circle;color:#6aff00;">Affiliate, <span style="color: #23cfff">Precourt Institute for Energy</span></li>
+                <li style="list-style-type: disc;color:#ff00f2;"></li><Senior Fellow, <span style="color: #3d23ff">Stanford Woods Institute for the Environment</span></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
