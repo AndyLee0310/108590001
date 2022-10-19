@@ -1,0 +1,83 @@
+<!-- LAB04 -->
+<!-- Deadline: 2022-10-26 23:59 -->
+<!-- Build your personal website -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /*  CSS  */
+        body {
+            margin: 0 auto;
+            background-color: #256D85;
+        }
+
+        #left{
+            margin-top: 130px;
+            margin-left:5%;
+            width:45%;
+            height:600px;
+            text-align:center;
+            float:left;
+        }
+
+        .photo_div {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            border-radius: 50%;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .photo_div:hover .image {
+            opacity: 0.3;
+        }
+
+        .photo_div:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            color: rgb(255, 254, 254);
+            font-size: 17px;
+            padding: 16px 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="left">
+        <div class="photo_div">
+            <img src="./assets/photo.jpeg" alt="Avatar" class="image" usemap="#foodmap" style="width:100%">
+            <div class="middle">
+            <div class="text">
+                <span>我是李文至</span><br >
+                <span>學生</span>
+                </div>
+            </div>
+        </div>
+        <map name="foodmap">
+            <area shape="poly" coords="156,151,157,120,115,121,144,137,154,200,188,210,211,196,222,143,135,160,169,161,189,121,113,129,84,77,88,116,113,124,107,102,118,71,69,83,63,60,72,66,63,76,39,32,46,207,202,219,132,130,159,199,186,192,209,197,206,73,63,71,197,185,196,208,197,208,121,112,118,92,79,88,46,35,43,173,165,172,166,159,167,177,173,179,221,219,231,155,154,169,112,111,122,214,212,226,208,207,218,163,162,167,64,61,67,106,105,110,171,166,173,161,156,162,189,170,179,168,147,160,135,135,157,177,155,171,85,76,100,82,76,97,63,61,85,47,49,73,195,187,197,190,167,174,248,231,235,186,175,175,179,165,168,180,162,168,124,112,120,105,95,97,79,71,72,177,169,180,162,156,158,177,169,174,214,205,212,179,166,175,184,153,160,226,181,188,231,195,196,87,73,83,229,219,226,208,197,211,130,118,134,64,54,63,136,134,139,84,81,90,92,85,99" alt="Croissant" href="https://www.andylwj.com/108590001/">
+        </map>
+    </div>
+</body>
+</html>
