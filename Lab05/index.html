@@ -1,0 +1,60 @@
+<!-- HTML Lab Assignment 5 -->
+<!-- Deadline: 2022-11-09 23:59 -->
+
+<!-- [10%] 1. A Table (3x3 cells) with two different background colors for <th> and <td> -->
+<!-- [20%] 2. Two buttons to control the width of the table (200px, 500 px) -->
+<!-- [20%] 3. Three buttons to control the border with and cell spacing of the table -->
+<!-- [20%] 4. Four buttons to control the background color of the table (will not affect the color of table headings)-->
+<!-- [20%] 5. A reset button to reset the style to the original.-->
+<!-- [10%] 6. Separate the JavaScript code from the html file and upload both files to github. (javascript in an external file) -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Write your Html code here -->
+    <table id="tb" style="text-align: center;width: 400px">
+        <tr id="tb_th" style="background-color: #247a7a;">
+            <th>Math</th>
+            <th>English</th>
+            <th>Programming</th>
+        </tr>
+        <tr id="tb_body1" style="background-color: #d6cf0b;">
+            <td>90</td>
+            <td>60</td>
+            <td>80</td>
+        </tr>
+        <tr id="tb_body2" style="background-color: #d6cf0b;">
+            <td>80</td>
+            <td>86</td>
+            <td>98</td>
+        </tr>
+    </table>
+
+    <p>Change The Table Width<br />
+        <button type="button" onClick="change_tb_width('200px')">200px</button>
+        <button type="button" onClick="change_tb_width('500px')">500px</button>
+    </p>
+
+    <p>Change The Border and the Spacing Width<br />
+        <button type="button" onClick="change_tb_border('1px')">1px</button>
+        <button type="button" onClick="change_tb_border('10px')">10px</button>
+        <button type="button" onClick="change_tb_border('20px')">20px</button>
+    </p>
+
+    <p>Change The Table Color<br />
+        <button type="button" style="background-color: #00ffff;" onClick="change_tb_body_color('#00ffff')">&nbsp;&nbsp;</button>
+        <button type="button" style="background-color: #1aff00;" onClick="change_tb_body_color('#1aff00')">&nbsp;&nbsp;</button>
+        <button type="button" style="background-color: #edfe00;" onClick="change_tb_body_color('#edfe00')">&nbsp;&nbsp;</button>
+        <button type="button" style="background-color: #f38600;" onClick="change_tb_body_color('#f38600')">&nbsp;&nbsp;</button>
+    </p>
+
+    <button type="button" onClick="resetTable()">Reset</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
