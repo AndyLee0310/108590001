@@ -16,6 +16,10 @@ import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+// For firebase
+import { database } from './firebase';
+import { ref, query, onValue } from 'firebase/database';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
@@ -29,12 +33,46 @@ function Copyright() {
   );
 }
 
-const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// const cards = ["a", "b", "c", "d", "e", "6", "7", "8", "9"];
 
 const theme = createTheme();
 
-export default function Album() {
-  return (
+// export default function Album() {
+class Album extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      post: null,
+      posts: [],
+    };
+  }
+
+  getPosts = () => {
+    const recentPostsRef = query(ref(database, 'posts'));/* TODO: use the query() method */
+    onValue(recentPostsRef, (snapshot) => {
+      let newPosts = [];
+      snapshot.forEach((childSnapshot) => {
+        /* TODO: parse the childSnapshot and use newPosts.push() to store the key and the post pair. You can use console.log() first to see what childSnapshot looks like. */
+        const keyData = childSnapshot.key;
+        const postData = childSnapshot.val().post;
+        newPosts.push({keyData, postData});
+      });
+      // Save the newPosts to the state var.
+      this.setState({posts: newPosts});
+    }, {
+      // We only need to fetch once
+      onlyOnce: true
+    });
+  }
+  
+  render() {
+    let tmp = this.state.posts;
+    if (tmp.length === 0) {
+      this.getPosts();
+    } else {
+      tmp = this.state.posts;
+    }
+    return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <AppBar position="relative">
@@ -83,8 +121,8 @@ export default function Album() {
         <Container sx={{ py: 8 }} maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
-            {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+            {tmp.map((card) => (
+              <Grid item key={card.keyData.toString()} xs={12} sm={6} md={4}>
                 <Card
                   sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
                 >
@@ -99,7 +137,7 @@ export default function Album() {
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Headinga
+                      {card.postData}
                     </Typography>
                     <Typography>
                       This is a media card. You can use this section to describe the
@@ -133,5 +171,7 @@ export default function Album() {
       </Box>
       {/* End footer */}
     </ThemeProvider>
-  );
+  );}
 }
+
+export default Album;
